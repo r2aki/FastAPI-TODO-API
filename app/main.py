@@ -4,7 +4,7 @@ from sqlalchemy import text
 from app.db import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.api.v1.user import user_router
+from app.api.v1.users import user_router
 from app.auth.router import auth_router
 
 app = FastAPI(title="TODO")
