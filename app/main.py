@@ -6,10 +6,14 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.api.v1.users import user_router
 from app.auth.router import auth_router
+from app.api.v1.tasks import task_router
+from app.api.v1.projects import project_router
 
 app = FastAPI(title="TODO")
 app.include_router(user_router)
 app.include_router(auth_router)
+app.include_router(task_router)
+app.include_router(project_router)
 
 
 @app.get("/")
